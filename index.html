@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init('J6gsbSqOVNaxdqZDg');
+    })();
+  </script>
+  <title>Прогресс</title>
+</head>
+<body>
+
+  <!-- header -->
+  <header class="header">
+    <nav class="nav container">
+      <img src="/assets/img/logo.svg" class="nav__logo">
+
+      <div class="nav__menu">
+        <ul class="nav__list grid">
+          <li class="nav__item">
+            <a class="nav__link" href="https://progress30.ru/">О компании</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- main -->
+  <main>
+    <section class="home section">
+      <div class="home__container container grid">
+
+        <!-- modal -->
+        <div class="modal__feedback hide" id="modal">
+          <div class="container grid">
+            <div class="feedback__container feedback__content">
+              <img id="close" class="feedback__close" src="./assets/img/close.svg" alt="close">
+              <h1 class="feedback__title">Оставьте свои контакты, менеджер свяжется с вами</h1>
+                <div class="feedback__data">
+                  <h1 class="feedback__subtitle">Ваше имя</h1>
+                  <input type="text" class="feedback__inpt" placeholder="Ваше имя" id="name" required>
+                </div>
+                <div class="feedback__data">
+                  <h1 class="feedback__subtitle">Телефон</h1>
+                  <input  class="feedback__inpt" placeholder="Телефон" id="phone" required>
+                </div>
+                <div class="feedback__data">
+                  <h1 class="feedback__subtitle">E-mail</h1>
+                  <input type="email" class="feedback__inpt" placeholder="e-mail" id="email" required>
+                </div>
+                <h1 class="modal__error" id="error"></h1>
+                <div class="feedback__checkbox" id="feedback__checkbox">
+                  <input type="checkbox" id="checkbox" name="checkbox" placeholder="checkbox">
+                  <p class="feedback__desc">Нажимая кнопку "Отправить", <br>вы даете <a class="feedback__link" href="./assets/img/Soglasie_na_obrabotku_personalnykh_dannykh_Progress (4).docx">согласие на обработку персональных данных</a></p>
+                </div>
+                <div>
+                  <button class="feedback__btn" type="submit" onclick="sendEmail()">Отправить</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- home -->
+        <div class="home__imges">
+          <img class="home__img" src="./assets/img/lines.svg">
+        </div>
+        <div class="home__data">
+          <h1 class="home__title">
+            2,2
+          </h1>
+          <h2 class="home__subtitle">
+            млн.руб
+          </h2>
+          <p class="home__desc">
+            успей <span style="color: red;">забронировать</span><br> до повышение цен
+          </p>
+          <div>
+            <button class="home__btn" id="btn">Забронировать</button>
+          </div>
+          <div>
+            <a class="home__btn home__btn-comp" href='http://progress30.ru/'>О компании</a>
+          </div>
+        </div>        
+      </div>      
+    </section>
+  </main>
+
+  <!-- script -->
+  <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
